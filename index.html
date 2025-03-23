@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Tour Buddy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -17,26 +18,30 @@
             width: 80%;
             margin: auto;
             padding: 100px 0;
+            background: #003366; /* Added background color */
+            border-radius: 10px; /* Added border radius */
         }
         h1 {
-            font-size: 36px;
+            font-size: 48px;
             font-weight: bold;
+            margin-bottom: 20px;
         }
         p {
-            font-size: 18px;
+            font-size: 20px;
             margin-top: 10px;
             opacity: 0.8;
         }
         .btn {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 15px 30px;
             margin-top: 20px;
-            font-size: 16px;
+            font-size: 18px;
             color: #001F5B;
             background: white;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
+            transition: background 0.3s, color 0.3s;
         }
         .btn:hover {
             background: #ffcc00;
@@ -47,9 +52,10 @@
             padding: 15px 0;
             background: rgba(0, 0, 0, 0.2);
             text-align: right;
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
+            z-index: 1000;
         }
         .top-nav a {
             color: white;
@@ -61,45 +67,140 @@
         .top-nav a:hover {
             color: #ffcc00;
         }
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .feature-box {
+            width: 45%;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .feature-box h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .feature-box p {
+            font-size: 16px;
+        }
+        .feature-box i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+        .testimonials {
+            background: #004080; /* Changed background color */
+            padding: 50px 0;
+            color: white;
+        }
+        .testimonials h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .testimonial {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .testimonial p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .testimonial h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .footer {
+            background: #001F5B; /* Changed background color */
+            padding: 20px 0;
+            color: white;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
 
     <div class="top-nav">
         <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Sign Up</a>
         <a href="services.html">Services</a>
     </div>
 
-    <div class="container">
+    <div class="hero">
         <h1>Your Perfect Journey Begins<br> with Virtual Tour Buddy</h1>
         <p>Discover seamless travel experiences with our all-in-one platform for flights, stays, and dining.</p>
-        <a href="signup.html" class="btn">Start Planning</a>
+        <a href="login.html" class="btn">Start Planning</a>
     </div>
 
-    <!-- Footer Section -->
-    <div class="footer">
+    <div class="container">
         <h2>Why Choose Virtual Tour Buddy?</h2>
         <div class="features">
             <div class="feature-box">
-                <h3>⭐ Best Deals Guaranteed</h3>
+                <i class="fas fa-tags"></i>
+                <h3>Best Deals Guaranteed</h3>
                 <p>We compare prices across providers to ensure you get the best rates.</p>
             </div>
             <div class="feature-box">
-                <h3>⏰ 24/7 Support</h3>
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
                 <p>Our customer service team is available round the clock to assist you.</p>
             </div>
             <div class="feature-box">
-                <h3>🛡️ Secure Booking</h3>
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Booking</h3>
                 <p>Your payments and personal information are always protected.</p>
             </div>
             <div class="feature-box">
-                <h3>👥 10M+ Happy Customers</h3>
+                <i class="fas fa-users"></i>
+                <h3>10M+ Happy Customers</h3>
                 <p>Join millions of satisfied travelers who trust Virtual Tour Buddy.</p>
             </div>
         </div>
     </div>
 
+    <div class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"Virtual Tour Buddy made my travel planning so easy and stress-free. Highly recommend!"</p>
+            <h3>- John Doe</h3>
+        </div>
+        <div class="testimonial">
+            <p>"Amazing service and great deals. I saved so much on my last trip!"</p>
+            <h3>- Jane Smith</h3>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Virtual Tour Buddy. All rights reserved.</p>
+    </div>
 
 </body>
 </html>
