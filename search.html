@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Travel Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #7B1FA2;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-box {
+            background: #7B1FA2;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .search-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .search-container input, .search-container select, .search-container button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-container button {
+            background: #7B1FA2;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background: #6a1b9a;
+        }
+        .result-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+        }
+        .result-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .flight-details {
+            flex: 1;
+        }
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #7B1FA2;
+        }
+        .select-button {
+            background: #7B1FA2;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .select-button:hover {
+            background: #6a1b9a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Search Travel Options</div>
+
+    <div class="search-box">
+        <div class="search-container">
+            <button>✈ Flights</button>
+            <button>🚆 Trains</button>
+            <input type="text" placeholder="From">
+            <input type="text" placeholder="To">
+            <input type="date">
+            <select>
+                <option>1 Passenger</option>
+                <option>2 Passengers</option>
+                <option>3 Passengers</option>
+            </select>
+            <button>Search</button>
+        </div>
+    </div>
+
+    <div class="result-container">
+        <div class="result-card">
+            <div class="flight-details">
+                <strong>SkyWings</strong> (Direct Flight)
+                <br>
+                🕘 <b>10:00 AM</b> - New York ➝ <b>10:30 PM</b> - London
+                <br>⏳ 7h 30m (Direct Flight)
+                <br><span class="price">₹49,999</span>
+            </div>
+            <button class="select-button">Select</button>
+        </div>
+
+        <div class="result-card">
+            <div class="flight-details">
+                <strong>Global Air</strong> (1 Stop)
+                <br>
+                🕘 <b>2:00 PM</b> - New York ➝ <b>2:45 AM</b> - London
+                <br>⏳ 7h 45m (1 Stop)
+                <br><span class="price">₹45,999</span>
+            </div>
+            <button class="select-button">Select</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Virtual Tour Buddy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 100px 0;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service-box {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        .service-box:hover img {
+            transform: scale(1.1);
+        }
+        .service-content {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .service-content p {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .learn-more {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="services">
+            <div class="service-box">
+                <img src="travel.jpg" alt="Travel">
+                <div class="service-content">
+                    ✈️ <span>Travel</span>
+                    <p>Find the best deals on flights and trains</p>
+                    <a href="#" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="accommodation.jpg" alt="Accommodation">
+                <div class="service-content">
+                    🏠 <span>Accommodation</span>
+                    <p>Book comfortable stays worldwide</p>
+                    <a href="#" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="food.jpg" alt="Food">
+                <div class="service-content">
+                    🍽️ <span>Food</span>
+                    <p>Discover and reserve amazing restaurants</p>
+                    <a href="#" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
